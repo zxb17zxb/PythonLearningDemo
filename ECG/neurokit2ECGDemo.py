@@ -14,6 +14,8 @@ df, info = nk.bio_process(ecg=data["ECG"],
 results = nk.bio_analyze(df, sampling_rate=100)
 
 # Show subset of results
-results[["ECG_Rate_Mean","HRV_RMSSD","RSP_Rate_Mean","RSA_P2T_Mean"]]
+res = results[["ECG_Rate_Mean","HRV_RMSSD","RSP_Rate_Mean","RSA_P2T_Mean"]]
+
+print(res)
 
 
