@@ -22,5 +22,5 @@ plot = nk.events_plot(rpeaks['ECG_R_Peaks'], ecg_signal)
 # Zooming into the first 5 R-peaks
 plot = nk.events_plot(rpeaks['ECG_R_Peaks'][:5], ecg_signal[:6000])
 
-# plot.show()
+plot.show()
 

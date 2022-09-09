@@ -32,3 +32,4 @@ plt.xlabel('frequency', fontsize=14)
 plt.title('PSD on both conditions(pwelch method)', fontsize=16)
 plt.legend()
 plt.show()
+

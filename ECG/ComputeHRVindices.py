@@ -9,6 +9,8 @@ plt.rc('font', size=8)
 
 # Download data
 data = nk.data("bio_resting_8min_100hz")
+print(data["ECG"])
+
 # Clean signal and find peaks
 ecg_cleaned = nk.ecg_clean(data["ECG"], sampling_rate=100)
 # Find peaks
@@ -19,3 +21,7 @@ peaks, info = nk.ecg_peaks(data["ECG"], sampling_rate=100)
 hrv_indices = nk.hrv(peaks, sampling_rate=100, show=True)
 
 hrv_indices.to_csv(output_filename)
+
+plt.savefig("NeuroKitDemo.png")
+plt.show()
+
