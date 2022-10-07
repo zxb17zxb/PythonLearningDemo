@@ -2,14 +2,17 @@
 # -*- coding:utf-8 -*-
 ### 生成数据
 from sklearn.datasets import make_classification
-X, y = make_classification(n_samples=1000,         # 样本个数
-                           n_features=25,          # 特征个数
-                           n_informative=3,        # 有效特征个数
+X, y = make_classification(n_samples=4000,         # 样本个数
+                           n_features=68,          # 特征个数
+                           n_informative=66,        # 有效特征个数
                            n_redundant=2,          # 冗余特征个数（有效特征的随机组合）
                            n_repeated=0,           # 重复特征个数（有效特征和冗余特征的随机组合）
-                           n_classes=8,            # 样本类别
+                           n_classes=2,            # 样本类别
                            n_clusters_per_class=1, # 簇的个数
                            random_state=0)
+print(X.shape)
+print("*****************")
+print(y.shape)
 ### 特征选择
 # RFE
 from sklearn.svm import SVC
